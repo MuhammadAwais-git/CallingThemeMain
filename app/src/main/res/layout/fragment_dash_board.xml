@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DashBoardFragment">
+
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:gravity="center"
+        android:text="Dashboad"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
+        app:layout_constraintStart_toEndOf="@+id/back_arrow"
+        app:layout_constraintTop_toTopOf="@+id/back_arrow" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMobileTools"
+        android:layout_width="140dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="25dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#EBEAEA"
+        app:cardCornerRadius="@dimen/_23sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardRam"
+        app:layout_constraintEnd_toStartOf="@+id/cardRam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardRam">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMobileToolsmain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/circularProgressbarD"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="-20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="10"
+                android:progressDrawable="@drawable/progressbar_bg"
+                android:secondaryProgress="100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtProgressbarD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressbarD"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressbarD"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressbarD"
+                app:layout_constraintTop_toTopOf="@+id/circularProgressbarD" />
+
+            <TextView
+                android:id="@+id/txtWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Wi-Fi"
+                android:textColor="#FF4848"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressbarD"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressbarD"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressbarD"
+                app:layout_constraintTop_toBottomOf="@+id/circularProgressbarD" />
+
+            <TextView
+                android:id="@+id/txtWifiSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Speed"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtWifi" />
+
+            <TextView
+                android:id="@+id/settxtWifiSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="180mmm"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtWifiSpeed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtWifiSpeed"
+                app:layout_constraintTop_toTopOf="@+id/txtWifiSpeed" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRam"
+        android:layout_width="140dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#EBEAEA"
+        app:cardCornerRadius="@dimen/_23sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/callScreen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintRam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/circularProgressbarRam"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="-20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="10"
+                android:progressDrawable="@drawable/progressbar_ram_bg"
+                android:secondaryProgress="100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtProgressbarRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressbarRam"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressbarRam"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressbarRam"
+                app:layout_constraintTop_toTopOf="@+id/circularProgressbarRam" />
+
+            <TextView
+                android:id="@+id/txtRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="Ram"
+                android:textColor="#ECB118"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressbarRam"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressbarRam"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressbarRam"
+                app:layout_constraintTop_toBottomOf="@+id/circularProgressbarRam" />
+
+            <TextView
+                android:id="@+id/txtTotalRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Total"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtRam" />
+
+            <TextView
+                android:id="@+id/settxtTotalRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="4GB"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtTotalRam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtTotalRam"
+                app:layout_constraintTop_toTopOf="@+id/txtTotalRam" />
+
+            <TextView
+                android:id="@+id/txtusedRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Used"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/txtTotalRam"
+                app:layout_constraintStart_toStartOf="@+id/txtTotalRam"
+                app:layout_constraintTop_toBottomOf="@+id/txtTotalRam" />
+
+            <TextView
+                android:id="@+id/settxtusedRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="4GB"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtusedRam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtusedRam"
+                app:layout_constraintTop_toTopOf="@+id/txtusedRam" />
+            <TextView
+                android:id="@+id/txtFreeRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Free"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/txtusedRam"
+                app:layout_constraintStart_toStartOf="@+id/txtusedRam"
+                app:layout_constraintTop_toBottomOf="@+id/txtusedRam" />
+
+            <TextView
+                android:id="@+id/settxtfreeRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="4GB"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtFreeRam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtFreeRam"
+                app:layout_constraintTop_toTopOf="@+id/txtFreeRam" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTemperature"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#EBEAEA"
+        app:cardCornerRadius="@dimen/_23sdp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardRam"
+        app:layout_constraintStart_toStartOf="@+id/cardMobileTools"
+        app:layout_constraintTop_toBottomOf="@+id/cardMobileTools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgTemp"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/temprature"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <ProgressBar
+                android:id="@+id/tempProgressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="25dp"
+                android:progressDrawable="@drawable/progressbar_bgtemp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgTemp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTemp"
+                app:layout_constraintTop_toTopOf="@+id/imgTemp"/>
+
+            <TextView
+                android:id="@+id/setTxtTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/setTemperaturegrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="°C"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setTxtTemperature"
+                app:layout_constraintStart_toEndOf="@+id/setTxtTemperature"
+                app:layout_constraintTop_toTopOf="@+id/setTxtTemperature" />
+
+            <TextView
+                android:id="@+id/txtTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="Temperature"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setTxtTemperature" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

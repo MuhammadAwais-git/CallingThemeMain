@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.call.callingthememain.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_wallpaperFragment"
+            app:destination="@id/wallpaperFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_flashAlertFragment"
+            app:destination="@id/flashAlertFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mobileToolsFragment"
+            app:destination="@id/mobileToolsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_storageFragment"
+            app:destination="@id/storageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_flashLightCTFragment"
+            app:destination="@id/flashLightCTFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_previewCallThemeFragment"
+            app:destination="@id/previewCallThemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wallpaperFragment"
+        android:name="com.call.callingthememain.fragments.WallpaperFragment"
+        android:label="fragment_wallpaper"
+        tools:layout="@layout/fragment_wallpaper" >
+        <action
+            android:id="@+id/action_wallpaperFragment_to_perviewWallpaperFragment"
+            app:destination="@id/perviewWallpaperFragment" />
+        <action
+            android:id="@+id/action_wallpaperFragment_to_storageFragment"
+            app:destination="@id/storageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flashAlertFragment"
+        android:name="com.call.callingthememain.fragments.FlashAlertFragment"
+        android:label="fragment_flash_alert"
+        tools:layout="@layout/fragment_flash_alert" />
+    <fragment
+        android:id="@+id/mobileToolsFragment"
+        android:name="com.call.callingthememain.fragments.MobileToolsFragment"
+        android:label="fragment_mobile_tools"
+        tools:layout="@layout/fragment_mobile_tools" >
+        <action
+            android:id="@+id/action_mobileToolsFragment_to_system_Info_Fragment"
+            app:destination="@id/system_Info_Fragment" />
+        <action
+            android:id="@+id/action_mobileToolsFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_mobileToolsFragment_to_batteryInformationFragment"
+            app:destination="@id/batteryInformationFragment" />
+        <action
+            android:id="@+id/action_mobileToolsFragment_to_sensorInfpFragment"
+            app:destination="@id/sensorInfpFragment" />
+        <action
+            android:id="@+id/action_mobileToolsFragment_to_storageInfoFragment"
+            app:destination="@id/storageInfoFragment" />
+        <action
+            android:id="@+id/action_mobileToolsFragment_to_displayInfoFragment"
+            app:destination="@id/displayInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storageFragment"
+        android:name="com.call.callingthememain.fragments.StorageFragment"
+        android:label="fragment_storage"
+        tools:layout="@layout/fragment_storage" >
+        <action
+            android:id="@+id/action_storageFragment_to_previewFavouriteFragment"
+            app:destination="@id/previewFavouriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/system_Info_Fragment"
+        android:name="com.call.callingthememain.fragments.SystemInfoFragment"
+        android:label="fragment_system__info_"
+        tools:layout="@layout/fragment_system__info_" />
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.call.callingthememain.fragments.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" />
+    <fragment
+        android:id="@+id/batteryInformationFragment"
+        android:name="com.call.callingthememain.fragments.BatteryInformationFragment"
+        android:label="fragment_battery_information"
+        tools:layout="@layout/fragment_battery_information" />
+    <fragment
+        android:id="@+id/sensorInfpFragment"
+        android:name="com.call.callingthememain.fragments.SensorInfpFragment"
+        android:label="fragment_sensor_infp"
+        tools:layout="@layout/fragment_sensor_infp" />
+    <fragment
+        android:id="@+id/storageInfoFragment"
+        android:name="com.call.callingthememain.fragments.StorageInfoFragment"
+        android:label="fragment_storage_info"
+        tools:layout="@layout/fragment_storage_info" />
+    <fragment
+        android:id="@+id/displayInfoFragment"
+        android:name="com.call.callingthememain.fragments.DisplayInfoFragment"
+        android:label="fragment_display_info"
+        tools:layout="@layout/fragment_display_info" />
+    <fragment
+        android:id="@+id/perviewWallpaperFragment"
+        android:name="com.call.callingthememain.fragments.PerviewWallpaperFragment"
+        android:label="fragment_perview_wallpaper"
+        tools:layout="@layout/fragment_perview_wallpaper" >
+        <argument
+            android:name="wallpaperModel"
+            app:argType="com.call.callingthememain.Hitmvvm.Model.Hit"
+             />
+    </fragment>
+    <fragment
+        android:id="@+id/flashLightCTFragment"
+        android:name="com.call.callingthememain.fragments.FlashLightCTFragment"
+        android:label="FlashLightCTFragment" />
+    <fragment
+        android:id="@+id/trendingFragment"
+        android:name="com.call.callingthememain.viewpagerFragments.TrendingFragment"
+        android:label="fragment_trending"
+        tools:layout="@layout/fragment_trending" >
+        <action
+            android:id="@+id/action_trendingFragment_to_previewCallThemeFragment"
+            app:destination="@id/previewCallThemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewCallThemeFragment"
+        android:name="com.call.callingthememain.viewpagerFragments.PreviewCallThemeFragment"
+        android:label="fragment_preview_calltheme"
+        tools:layout="@layout/fragment_preview_calltheme" >
+        <argument
+            android:name="CallThemeModel"
+            app:argType="com.call.callingthememain.models.CallThemeModel" />
+        <action
+            android:id="@+id/action_previewCallThemeFragment_to_storageFragment"
+            app:destination="@id/storageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewFavouriteFragment"
+        android:name="com.call.callingthememain.viewpagerFragments.PreviewFavouriteFragment"
+        android:label="fragment_preview_favourite"
+        tools:layout="@layout/fragment_preview_favourite" >
+        <argument
+            android:name="FavCallThemeModel"
+            app:argType="com.call.callingthememain.models.FavCallThemeModel" />
+    </fragment>
+</navigation>

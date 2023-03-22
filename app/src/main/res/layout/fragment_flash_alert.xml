@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.FlashAlertFragment"
+    android:background="@color/black"
+    >
+
+
+    <ImageView
+        android:id="@+id/imgFlashOff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/flash_off"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/viewFlash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imgFlashOn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/flash_on"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/flashSeekBar"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:elevation="10dp"
+        android:maxWidth="8dp"
+        android:maxHeight="8dp"
+        android:minWidth="10dp"
+        android:minHeight="10dp"
+        android:progressDrawable="@drawable/switch_track"
+        android:thumb="@drawable/custom_thumb"
+        app:layout_constraintBottom_toTopOf="@+id/viewFlash"
+        app:layout_constraintEnd_toEndOf="@+id/viewFlash"
+        app:layout_constraintStart_toStartOf="@+id/viewFlash"
+        app:layout_constraintTop_toTopOf="@+id/imgFlashOff" />
+
+    <ImageView
+        android:id="@+id/seekbarBackground"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:elevation="10dp"
+        android:paddingTop="35dp"
+        android:src="@drawable/seekbar_background"
+        app:layout_constraintBottom_toBottomOf="@+id/flashSeekBar"
+        app:layout_constraintEnd_toEndOf="@+id/flashSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/flashSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/flashSeekBar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

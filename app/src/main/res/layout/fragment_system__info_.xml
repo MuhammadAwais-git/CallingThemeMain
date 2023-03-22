@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SystemInfoFragment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="System info"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
+        app:layout_constraintStart_toEndOf="@+id/back_arrow"
+        app:layout_constraintTop_toTopOf="@+id/back_arrow" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMobileTools"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#BBD8F3"
+        app:cardCornerRadius="@dimen/_23sdp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrow">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMobileToolsmain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="140dp" />
+            <TextView
+                android:id="@+id/txtBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:text="Brand"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+            <TextView
+                android:id="@+id/settxtBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="start"
+                android:text="settxtBrand"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtDeviceId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:text="DeviceId"
+                app:layout_constraintTop_toBottomOf="@id/txtBrand"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/settxtDeviceId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="settxtDeviceId"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/settxtBrand" />
+
+            <TextView
+                android:id="@+id/txtModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:text="Model"
+                app:layout_constraintTop_toBottomOf="@id/txtDeviceId"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/settxtModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="settxtModel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/settxtDeviceId" />
+            <TextView
+                android:id="@+id/txtManufacture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:text="Manufacture"
+                app:layout_constraintTop_toBottomOf="@id/txtModel"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/settxtManufacture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="settxtManufacture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/settxtModel" />
+            <TextView
+                android:id="@+id/txtFingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:text="Finger Print"
+                app:layout_constraintTop_toBottomOf="@id/txtManufacture"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/settxtFingerprint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:scrollHorizontally="true"
+                android:text="txtFingerprint"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/settxtManufacture" />
+
+            <TextView
+                android:id="@+id/txtVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:text="Version Code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/settxtVersion"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/settxtVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="settxtVersion"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/settxtFingerprint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

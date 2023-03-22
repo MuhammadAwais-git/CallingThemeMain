@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".viewpagerFragments.PreviewCallThemeFragment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:elevation="5dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imgWallpaperPerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+        <VideoView
+            android:id="@+id/previewVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_phone_call"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:elevation="5dp"
+        android:src="@drawable/call_img"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+        app:civ_circle_background_color="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrow" />
+
+    <TextView
+        android:id="@+id/tv_call_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="Alison Willan"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image_phone_call"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_phone_call"
+        app:layout_constraintTop_toBottomOf="@id/profile_image_phone_call" />
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0512363435"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_call_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_call_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_call_name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSetWallpaper"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:padding="@dimen/_3sdp"
+        app:cardBackgroundColor="#4F5AE4"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtSetCallTheme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Apply Theme"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <ImageView
+        android:id="@+id/imgFav"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="70dp"
+        android:elevation="5dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/fav_icon"
+        app:layout_constraintBottom_toTopOf="@+id/tv_phone_pick_up_incoming"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgDownload"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="150dp"
+        android:elevation="5dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/download_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cardSetWallpaper"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/tv_phone_hang_up_incoming"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:src="@drawable/ic_phone_hang_up"
+        app:layout_constraintBottom_toTopOf="@+id/cardSetWallpaper"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/tv_phone_pick_up_incoming"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:src="@drawable/ic_attend_call"
+        app:layout_constraintBottom_toTopOf="@+id/cardSetWallpaper"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/fav_bg"
+        app:layout_constraintStart_toStartOf="@+id/imgFav"
+        app:layout_constraintEnd_toEndOf="@+id/imgFav"
+        app:layout_constraintTop_toTopOf="@+id/imgFav"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFav"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

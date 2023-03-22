@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.StorageFragment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Storage"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
+        app:layout_constraintStart_toEndOf="@+id/back_arrow"
+        app:layout_constraintTop_toTopOf="@+id/back_arrow" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFav"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/callScreen"
+        app:layout_constraintStart_toStartOf="@+id/callScreen"
+        app:layout_constraintTop_toBottomOf="@+id/callScreen"
+        app:cardCornerRadius="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:cardBackgroundColor="@color/appblue">
+
+        <TextView
+            android:id="@+id/txtFAv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Favourites"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+             />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favouriteRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardFav" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/nav_home"
+
+        />
+
+    <item android:id="@+id/wallpaperFragment"
+        android:title="Wallpaper"
+        android:icon="@drawable/nav_wallpaper"/>
+    <item android:id="@+id/navWallpaper1"
+        android:title=""
+    />
+    <item android:id="@+id/flashLightCTFragment"
+        android:title="Flash Alert"
+        android:icon="@drawable/nav_flash_alert"/>
+
+
+    <item android:id="@+id/mobileToolsFragment"
+        android:title="Tools"
+        android:icon="@drawable/nav_mobile_tools"/>
+
+</menu>

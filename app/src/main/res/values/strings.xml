@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">CallingThemeMain</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="call_screen">Call Screen Theme</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+    <string name="btn_mic_name" formatted="false">Mute</string>
+    <string name="btn_keypad_name" formatted="false">Keypad</string>
+    <string name="btn_speaker_name" formatted="false">Speaker</string>
+    <string name="btn_mic_off_name" formatted="false">Unmute</string>
+    <string name="btn_hold_name" formatted="false">Hold</string>
+    <string name="btn_unhold_name" formatted="false">Unhold</string>
+
+
+    <string name="speaker_on_message" formatted="false">Loudspeaker on</string>
+    <string name="speaker_off_message" formatted="false">Loudspeaker off</string>
+    <string name="call_on_hold_message" formatted="false">Call is on hold</string>
+    <string name="call_remove_hold_message" formatted="false">Call removed from hold</string>
+
+    <string name="btn_speaker_off_name" formatted="false">Speaker Off</string>
+
+
+    <string name="microphone_off_message" formatted="false">Microphone muted</string>
+    <string name="microphone_on_message" formatted="false">Microphone un-muted</string>
+    <string name="wallpapers">wallpapers</string>
+
+
+</resources>

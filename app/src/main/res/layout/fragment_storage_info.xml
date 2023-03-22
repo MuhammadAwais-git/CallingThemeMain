@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StorageInfoFragment">
+
+    <ImageView
+        android:id="@+id/back_arrowS"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:gravity="center"
+        android:text="Storage info"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_arrowS"
+        app:layout_constraintStart_toEndOf="@+id/back_arrowS"
+        app:layout_constraintTop_toTopOf="@+id/back_arrowS" />
+
+
+    <ImageView
+        android:id="@+id/imgMobileScreen"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/icon_storage"
+        app:layout_constraintStart_toStartOf="@+id/back_arrowS"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrowS" />
+
+    <TextView
+        android:id="@+id/txtMobileScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="Internal storage "
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMobileScreen"
+        app:layout_constraintStart_toEndOf="@+id/imgMobileScreen"
+        app:layout_constraintTop_toTopOf="@+id/imgMobileScreen" />
+
+    <ProgressBar
+        android:id="@+id/progressbarStorage"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbar_storage_bg"
+        android:secondaryProgress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMobileScreen" />
+
+    <TextView
+        android:id="@+id/txtProgressbarS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressbarStorage"
+        app:layout_constraintEnd_toEndOf="@+id/progressbarStorage"
+        app:layout_constraintStart_toStartOf="@+id/progressbarStorage"
+        app:layout_constraintTop_toTopOf="@+id/progressbarStorage" />
+
+    <TextView
+        android:id="@+id/txtused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:text="Used"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/progressbarStorage"
+        app:layout_constraintStart_toStartOf="@+id/progressbarStorage"
+        app:layout_constraintTop_toBottomOf="@+id/progressbarStorage" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTotal"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#EBEAEA"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtused">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintTotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/setTotalgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Total"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="48gb"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="80dp"
+                app:layout_constraintBottom_toBottomOf="@+id/setTotalgrade"
+                app:layout_constraintStart_toEndOf="@+id/setTotalgrade"
+                app:layout_constraintTop_toTopOf="@+id/setTotalgrade" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUsed"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#EBEAEA"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardTotal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintUsed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/setUsedgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Used"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="48gb"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="80dp"
+                app:layout_constraintBottom_toBottomOf="@+id/setUsedgrade"
+                app:layout_constraintStart_toEndOf="@+id/setUsedgrade"
+                app:layout_constraintTop_toTopOf="@+id/setUsedgrade" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFree"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#EBEAEA"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardUsed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintFree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/setFreegrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Free"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="48gb"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="80dp"
+                app:layout_constraintBottom_toBottomOf="@+id/setFreegrade"
+                app:layout_constraintStart_toEndOf="@+id/setFreegrade"
+                app:layout_constraintTop_toTopOf="@+id/setFreegrade" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

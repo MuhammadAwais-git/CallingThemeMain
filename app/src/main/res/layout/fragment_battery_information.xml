@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BatteryInformationFragment">
+
+
+    <ImageView
+        android:id="@+id/back_arrowb"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:gravity="center"
+        android:text="Battery info"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_arrowb"
+        app:layout_constraintStart_toEndOf="@+id/back_arrowb"
+        app:layout_constraintTop_toTopOf="@+id/back_arrowb" />
+
+    <ProgressBar
+        android:id="@+id/progressbarBattery"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="158dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="5dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbar_battery_bg"
+        android:secondaryProgress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrowb" />
+
+    <TextView
+        android:id="@+id/txtProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressbarBattery"
+        app:layout_constraintEnd_toEndOf="@+id/progressbarBattery"
+        app:layout_constraintStart_toStartOf="@+id/progressbarBattery"
+        app:layout_constraintTop_toTopOf="@+id/progressbarBattery" />
+
+
+    <ImageView
+        android:id="@+id/imgHealth"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/health"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/progressbarBattery" />
+
+    <TextView
+        android:id="@+id/txtHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="Health"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgHealth"
+        app:layout_constraintStart_toEndOf="@+id/imgHealth"
+        app:layout_constraintTop_toTopOf="@+id/imgHealth" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="225dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_75sdp" />
+
+    <TextView
+        android:id="@+id/setTxtHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Health"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHealth"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/txtHealth" />
+
+    <ImageView
+        android:id="@+id/imgvoltage"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/voltage"
+        app:layout_constraintBottom_toBottomOf="@+id/txtVoltage"
+        app:layout_constraintEnd_toStartOf="@+id/txtVoltage"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/txtVoltage" />
+
+    <TextView
+        android:id="@+id/txtVoltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Voltage"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtHealth"
+        app:layout_constraintStart_toStartOf="@+id/txtHealth"
+        app:layout_constraintTop_toBottomOf="@+id/txtHealth" />
+
+    <TextView
+        android:id="@+id/setTxtVoltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="voltage"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtVoltage"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtHealth" />
+
+    <ImageView
+        android:id="@+id/imgTemprature"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/battery_temp"
+        app:layout_constraintBottom_toBottomOf="@+id/txttemp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/txttemp" />
+
+    <TextView
+        android:id="@+id/txttemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Temperature"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/imgvoltage"
+        app:layout_constraintStart_toStartOf="@+id/txtVoltage"
+        app:layout_constraintTop_toBottomOf="@+id/txtVoltage" />
+
+    <TextView
+        android:id="@+id/setBatteryTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="temp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txttemp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/txttemp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinehorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_310sdp" />
+
+    <ImageView
+        android:id="@+id/imgWirelessshow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guidelinehorizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imgWireless"
+        app:layout_constraintStart_toStartOf="@+id/imgWireless" />
+    <ImageView
+        android:id="@+id/imgWireless"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="80dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/wireless"
+        app:layout_constraintEnd_toEndOf="@id/guidelinehorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelinehorizontal" />
+
+    <TextView
+        android:id="@+id/txtWireless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Wireless"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgWireless"
+        app:layout_constraintStart_toStartOf="@+id/imgWireless"
+        app:layout_constraintTop_toBottomOf="@+id/imgWireless" />
+
+    <ImageView
+        android:id="@+id/imgAcshow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guidelinehorizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imgAc"
+        app:layout_constraintStart_toStartOf="@+id/imgAc" />
+
+    <ImageView
+        android:id="@+id/imgAc"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="30dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ac"
+        app:layout_constraintStart_toEndOf="@id/imgWireless"
+        app:layout_constraintTop_toTopOf="@+id/guidelinehorizontal" />
+
+    <TextView
+        android:id="@+id/txtAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="AC"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgAc"
+        app:layout_constraintStart_toStartOf="@+id/imgAc"
+        app:layout_constraintTop_toBottomOf="@+id/imgAc" />
+
+    <ImageView
+        android:id="@+id/imgUSB"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="30dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/usb"
+        app:layout_constraintStart_toEndOf="@id/imgAc"
+        app:layout_constraintTop_toTopOf="@+id/guidelinehorizontal" />
+
+    <ImageView
+        android:id="@+id/imgUSBshow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guidelinehorizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imgUSB"
+        app:layout_constraintStart_toStartOf="@+id/imgUSB" />
+    <TextView
+        android:id="@+id/txtUSB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="USB"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgUSB"
+        app:layout_constraintStart_toStartOf="@+id/imgUSB"
+        app:layout_constraintTop_toBottomOf="@+id/imgUSB" />
+
+    <ImageView
+        android:id="@+id/imgBattery"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="30dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/battry"
+        app:layout_constraintStart_toEndOf="@id/imgUSB"
+        app:layout_constraintTop_toTopOf="@+id/guidelinehorizontal" />
+
+    <ImageView
+        android:id="@+id/imgBatteryshow"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guidelinehorizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imgBattery"
+        app:layout_constraintStart_toStartOf="@+id/imgBattery" />
+    <TextView
+        android:id="@+id/txtBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Battery"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgBattery"
+        app:layout_constraintStart_toStartOf="@+id/imgBattery"
+        app:layout_constraintTop_toBottomOf="@+id/imgBattery" />
+</androidx.constraintlayout.widget.ConstraintLayout>

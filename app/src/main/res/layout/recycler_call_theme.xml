@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/mainConstraiantLayoutCall"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardBackgroundColor="@color/appblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgCallTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="4dp"
+        android:elevation="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cross"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_image_phone_call" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_phone_call"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/call_img"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+        android:elevation="5dp"
+        android:layout_marginTop="10dp"
+        app:civ_circle_background_color="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_call_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="Alison Willan"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image_phone_call"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_phone_call"
+        app:layout_constraintTop_toBottomOf="@id/profile_image_phone_call" />
+
+    <TextView
+        android:id="@+id/txtCallNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:text="0512363435"
+        android:elevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_call_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_call_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_call_name" />
+
+    <ImageView
+        android:id="@+id/tv_phone_hang_up_incoming"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_phone_hang_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/tv_phone_pick_up_incoming"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_attend_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
